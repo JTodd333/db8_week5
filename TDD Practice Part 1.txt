@@ -1,0 +1,57 @@
+int CheckStraight Tests
+
+S2, S3, S4  = 4
+SQ, SK, SA  = 14
+S9, SJ, S10 = 11
+
+S2, S3, S5 = 0
+SA, SK, SJ = 0
+
+
+int Check3ofaKind Tests
+S2, S2, S2 = 2
+S7, S7, S7 = 7
+SA, SA, SA = 14
+
+S2, S2, S3 = 0
+SK, SA, SA = 0
+S8, S9, S8 = 0
+
+bool isRoyalFlush Tests
+14 (result from Check Straight function) SQ,SK,SA
+13     (SJ, SQ, SK)
+14 (but all the same SA, SA, SA)
+
+
+int PlayCards
+Straight  
+(2, 2) = 0
+(2, 3) = 1
+(14, 14) = 0
+(13, 14) = 1
+(3, 2) = -1
+(14, 13) -1
+
+3 of Kind
+(2, 2) = 0
+(2, 3) = 1
+(14, 14) = 0
+(13, 14) = 1
+(3, 2) = -1
+(14, 13) -1
+(6,7) = 1
+(7,6) = -1
+
+
+Straight/3 of Kind
+SA, SA, SA / S2, S3, S4 = 1
+S2, S3, S4 / SA, SA, SA = -1
+SA, SA, SA / SQ, SK, SA = 1
+SQ, SK, SA / SA, SA, SA = -1
+S3, SK, SA / SA, SA, SA = 1
+SA, SA, SA / S2, SK, SA = -1
+S2, S3, S5 / SJ, SQ, SA = 0
+SA, SA, SQ / SA, SA, SK = 0
+S2, S2, S3 / S3, S3, S2 = 0
+
+

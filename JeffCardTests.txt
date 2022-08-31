@@ -1,0 +1,66 @@
+Jeff example
+Method Testing (really called "unit" testing)
+
+Check Straight
+SA, S2, S3 - 0 (testing Ace)
+S2, S4, S3- 4
+S5, S6, S7 - 7 (straight, sorted)
+S6, S5, S7 - 7 (straight sorted)
+S10, SJ, SQ - 12
+SJ, SQ, SK - 13
+SQ, SK, SA - 14
+S3, S3, S3 - 0
+SJ, SQ, SA - 0
+
+Check 3 of Kind
+S3, S3, S3 - 3
+SJ, SJ, SJ - 11
+SQ, sQ, SQ - 12
+SK, SK, SK - 13
+SA, SA, SA, - 14
+S2, S3, S3 - 0
+S8, S9, S10 - 0
+
+
+Royal Flush
+maybe SQ, SK, SA - true
+SK, SQ, SA - true
+S3, S4, S5 - false
+S3, S3, S3 - false
+S3, S6, SA - false
+SA, SA, SA - false
+
+PlayCards()
+//Start with one we know left wins
+//Then one where right wins
+//And one where nobody wins
+//And then check a draw
+(SQ, SK, SA), (S2, S5, S9) = -1
+S2, S5, S9 / SQ, SK, SA = 1
+S2, S5, S9 / S3, S6, S10 = 0
+
+SQ, SK, SA / SQ, SK, SA = 0
+
+Both play straight (same straight; then different straights)
+both play 3 of a kind (same 3; then different 3)
+straight vs 3 of a kind (differents ranks; then same ranks)
+
+SA, SA, SA (14) (three of a kind)
+S4, S5, S6 (6) (straight)
+straight wins
+
+Straights: Test left wins, test right wins, test draw
+S10, SJ, SQ / S5, S6, S7 = -1
+S5, S6, S7 / S10, Sj, SQ = 1
+S10, SJ, SQ / S10, SJ, SQ = 0
+
+3 of a kinds Tests:
+(S9, S9, S9) / S7, S7 S7 = -1
+S7, S7, S7 / S9, S9, S9 = 1
+S7, S7, S7 / S7, S7, S7 = 0
+
+Straight Vs 3:
+S9, S10, SJ / SA, SA, SA = -1
+S8, S8, S8 / S9, S10 SJ = 1
+
+
