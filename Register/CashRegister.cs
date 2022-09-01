@@ -27,13 +27,25 @@ namespace Register
         {
             //You'll need to total the price and
             //then calulate the tax.
-            // So for example if we have a list liek this:
+            // So for example if we have a list like this:
             //      milk, 2.00
             //      bread, 2.50
             //      CokeZero, 2.50
             // Return 0.42
-            return 0.0m;
-
+            decimal total = GrandTotal(prods);
+            decimal taxTotal = total * .06m;
+            return taxTotal;
         }
+
+        public static string FinalTotal(List<Product> prods)
+        {
+            decimal subtotal = CashRegister.GrandTotal(prods);
+            decimal taxtotal = CashRegister.CalulateTax(prods);
+            decimal finaltotal = subtotal + taxtotal;
+            string converted = finaltotal.ToString("0.00");
+            return converted;
+        }
+
+
     }
 }
