@@ -6,11 +6,11 @@ namespace FindPrimeNumbers_Tests
     {
         //Indexes next to input
         [Theory]
-        [InlineData(0, 2)]
-        [InlineData(1, 3)]
-        [InlineData(10, 31)]
-        [InlineData(14, 47)]
-        [InlineData(24, 97)]
+        [InlineData(1, 2)]
+        [InlineData(2, 3)]
+        [InlineData(11, 31)]
+        [InlineData(15, 47)]
+        [InlineData(25, 97)]
         public void TestClass(int value, int expected)
         {
 
