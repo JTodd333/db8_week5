@@ -6,6 +6,8 @@ Product p3 = new Product("bread", 3.00m);
 Product p4 = new Product("coffee", 4.50m);
 List<Product> products = new List<Product>();
 products.Add(p1); products.Add(p2); products.Add(p3); products.Add(p4);
+
+
 Console.WriteLine("Welcome! Please choose an item to add to you cart.");
 for (int i = 1; i <= products.Count; i++)
 {
@@ -15,6 +17,8 @@ for (int i = 1; i <= products.Count; i++)
     }
 }
 List<Product> cart = new List<Product>();
+
+
 
 bool KeepGoing = false;
 
